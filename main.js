@@ -80,7 +80,7 @@ async function handleStatuses(accountId) {
 
 async function main() {
 	let verifyCredentials = await client.get('accounts/verify_credentials', {});
-	if (verifyCredentials.statusCode !== 200) {
+	if (verifyCredentials.resp.statusCode !== 200) {
 		console.error(verifyCredentials);
 		process.exit(1);
 	}
