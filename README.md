@@ -20,7 +20,7 @@ yarn
 
 ## Create a Mastodon application and get the access token
 
-> You can do this from the settings in Mastodon. There's a 'Development' section. Give the application at least read and write permissions.
+You can do this from the settings in Mastodon. There's a 'Development' section. Give the application at least read and write permissions.
 
 ## Add config options
 Create a file `config.local.js` file in the same directory as this `README.md` with the following content:
