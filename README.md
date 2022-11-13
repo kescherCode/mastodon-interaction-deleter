@@ -18,11 +18,11 @@ can stay visible on other instances long after you ran this tool.
 yarn
 ```
 
-### Create a Mastodon application and get the access token
+## Create a Mastodon application and get the access token
 
 > You can do this from the settings in Mastodon. There's a 'Development' section. Give the application at least read and write permissions.
 
-### Add config options
+## Add config options
 Create a file `config.local.js` file in the same directory as this `README.md` with the following content:
 ```js
 export const MASTODON_BASE_URL = 'https://example.mastodon.tld';
@@ -34,7 +34,7 @@ This file is then imported using config.js, which initializes the API access whe
 - `MASTODON_BASE_URL` is the URL for the instance you're on.
 - `MASTODON_ACCESS_TOKEN` is the access token from the previous step
 
-### Run the tool
+## Run the tool
 
 ```bash
 yarn start
