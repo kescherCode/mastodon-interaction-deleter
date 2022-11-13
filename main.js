@@ -68,9 +68,9 @@ async function handleStatuses(accountId) {
 
 		if (statuses.resp.statusCode === 200)
 			for (const status of statuses.data) {
-				const deleteOrUnreblog = await status.reblog == null ?
-					client.delete(`statuses/${status.id}`, {}) :
-					client.post(`statuses/${status.reblog.id}/unreblog`, {});
+				const deleteOrUnreblog = status.reblog == null ?
+					await client.delete(`statuses/${status.id}`, {}) :
+					await client.post(`statuses/${status.reblog.id}/unreblog`, {});
 				if (await isSingleUnknownError('Unknown error in deleting status', deleteOrUnreblog))
 					break;
 				await handleRateLimit(deleteOrUnreblog.resp.headers, true);
