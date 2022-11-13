@@ -1,12 +1,17 @@
 # Mastodon interaction deleter
 
 This tool deletes all favourites, boosts and statuses made on the account it is used on, using the [Mastodon API](https://docs.joinmastodon.org/client/intro/).
-This 
+This is useful if you want to clear your profile, but want to keep using it in the future.
+
+## Caveats
+
+Deletions might not federate to other servers very well. Some deletions might be missed or delayed, which means your posts
+can stay visible on other instances long after you ran this tool.
 
 ## Install dependencies
 
-- install NodeJS, preferably the latest LTS version of it.
-- install yarn.
+- install [NodeJS](https://nodejs.org), preferably the latest **LTS** version of it.
+- install [yarn](https://yarnpkg.com).
 - Run: <br><br>
 
 ```bash
